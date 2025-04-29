@@ -1,14 +1,30 @@
 # Smart Home Energy and Comfort Optimization
 
+![MATLAB](https://img.shields.io/badge/MATLAB-R2024a-blue.svg)
+![License](https://img.shields.io/badge/license-MIT-green.svg)
+![Status](https://img.shields.io/badge/status-stable-green.svg)
+
 This MATLAB project implements a genetic algorithm (GA) to optimize smart home controls for both energy efficiency and occupant comfort across summer and winter seasons. The system optimizes three main control parameters: thermostat settings, lighting levels, and blind positions.
 
-## Genetic Algorithm Parameters
+## 📋 Table of Contents
 
-- Population Size: 100 individuals
-- Maximum Generations: 300
-- Random Seed: 421011 (for reproducibility)
-- Chromosome Structure: 72 elements (24 hours × 3 control parameters)
-- Function Tolerance: 1e-6
+- [Smart Home Energy and Comfort Optimization](#smart-home-energy-and-comfort-optimization)
+  - [📋 Table of Contents](#-table-of-contents)
+  - [Project Structure](#project-structure)
+  - [Genetic Algorithm Parameters](#genetic-algorithm-parameters)
+  - [Data Files](#data-files)
+  - [📊 Example Output](#-example-output)
+    - [Summer Schedule Preview](#summer-schedule-preview)
+    - [Performance Metrics](#performance-metrics)
+  - [Control Parameters](#control-parameters)
+  - [Comfort Score Calculation](#comfort-score-calculation)
+  - [Energy Cost Model](#energy-cost-model)
+  - [Optimization Goals](#optimization-goals)
+  - [Results](#results)
+  - [Usage](#usage)
+  - [Dependencies](#dependencies)
+  - [📄 License](#-license)
+  - [📚 Citation](#-citation)
 
 ## Project Structure
 
@@ -21,7 +37,15 @@ This MATLAB project implements a genetic algorithm (GA) to optimize smart home c
 - `summer_data.mat` - Environmental data for peak summer conditions
 - `winter_data.mat` - Environmental data for peak winter conditions
 
-### Data Files
+## Genetic Algorithm Parameters
+
+- Population Size: 100 individuals
+- Maximum Generations: 300
+- Random Seed: 421011 (for reproducibility)
+- Chromosome Structure: 72 elements (24 hours × 3 control parameters)
+- Function Tolerance: 1e-6
+
+## Data Files
 
 - `summer_data.mat` and `winter_data.mat` contain hourly environmental data including:
   - Outside temperature (Summer: 32-50°C, Winter: 7-23°C)
@@ -31,6 +55,26 @@ This MATLAB project implements a genetic algorithm (GA) to optimize smart home c
   - Lighting preferences (0-100%)
   - Location-specific context: Madinah climate data
   - 24-hour time series for peak summer (July) and winter (January)
+
+## 📊 Example Output
+
+After running the optimization, you'll get detailed schedules and visualizations:
+
+### Summer Schedule Preview
+
+```plaintext
+Hour | Thermostat | Lighting | Blinds    | Notes
+-----|------------|----------|-----------|----------------
+6    | Cool 23C   | 25%      | Closed    | Sunrise ~5:40 AM
+14   | Heat 21C   | 75%      | Open      | Peak Sun Period
+19   | Cool 25C   | 50%      | Closed    | Sunset ~7:10 PM
+```
+
+### Performance Metrics
+
+- Summer Comfort Score: ~19.63/24 (81.79%)
+- Winter Comfort Score: ~22.28/24 (92.84%)
+- Average Energy Reduction: 15-25%
 
 ## Control Parameters
 
@@ -126,3 +170,21 @@ The optimization results are saved in:
   - Required for genetic algorithm implementation  
 
 Note: The project has been tested with these versions. Earlier versions may work but are not guaranteed.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 📚 Citation
+
+If you use this work in your research, please cite:
+
+```bibtex
+@software{smart_home_ga_2025,
+  author = {JKc66},
+  title = {Smart Home Energy and Comfort Optimization using Genetic Algorithm},
+  year = {2025},
+  publisher = {GitHub},
+  url = {https://github.com/JKc66/Project_3_AI_genetic_algo}
+}
+```
