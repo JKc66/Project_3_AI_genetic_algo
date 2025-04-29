@@ -1,6 +1,6 @@
 # Smart Home GA Optimization Results
 
-Date Run: 29-Apr-2025 19:10:18
+Date Run: 29-Apr-2025 19:23:27
 GA Parameters:
 - Population Size: 100
 - Max Generations: 300
